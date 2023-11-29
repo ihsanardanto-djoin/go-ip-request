@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-func getClientIP(r *http.Request) (string, error) {
+func GetClientIP(r *http.Request) (string, error) {
 	//Get IP from Cloudflare
 	ip := r.Header.Get("CF-Connecting-IP")
 	netIP := net.ParseIP(ip)
